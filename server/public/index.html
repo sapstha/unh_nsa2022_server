@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+    --lookspurple:#52489c;
+    --blue:#1e90ff;
+    --white:#ffffff;
+    --yellowish:#F7C600;
+    --looksgreen:#59c3c3;
+    --looksred:#f45b69;
+  
+}
+.container{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: /*1*/0.2fr /*2*/6fr /*3*/1fr /*4*/6fr /*5*/1fr /*6*/6fr 1fr /*7*/6fr /*8*/6fr /*9*/6fr /*10*/0.8fr;
+    grid-template-areas:
+     "nav nav nav nav" /*1*/
+     "content1 content1 content2 content2"/*2*/
+     "education education education education"/*3*/
+     "content3 content3 content4 content4"/*4*/
+     "experiences experiences experiences experiences"/*5*/
+     "content5 content6 content6 content7"/*6*/
+     "projects projects projects projects"
+     "projectcontent1 projectcontent2 projectcontent2 projectContent3"/*7*/
+     "techContent1 techContent1 techContent2 techContent2"/*8*/
+     "blog blog blog blog"
+     "blogContent1 blogContent1 blogContent2 blogContent2"/*9*/
+     "footer footer footer footer";/*10*/
+     grid-gap:1.5rem;
+}
+.dropDownIcon{
+    float: right;
+    padding: 5px;
+}
+nav{
+    background-color: #A4133C;
+    grid-area:nav;
+}
+
+#headername{
+    text-align: center;
+    font-size: 20px;
+    font-family:cursive;
+    float:left;
+    margin-top: 6.5px;
+}
+ul {
+    list-style-type: none;
+    float: right;
+    
+  }
+  li{
+    display: inline-block;
+    color: white;
+   
+  }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+ li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 5px;
+  }
+ a.active {
+    color:white;
+    transition: .5s;
+}
+a:hover {
+    color: rgb(51, 45, 45);
+}
+.icon{
+    display: none;
+}
+.home{
+    display: none;
+}
+#content1{
+    background-color: var(--white);
+    grid-area: content1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#profileimg{
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+  }
+#name{
+    margin-left: 40px;
+}
+#title{
+    margin-left: 40px;
+}
+
+#content2{
+    background-color: var(--white);
+    grid-area: content2;
+    
+}
+#aboutmetext{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .button {
+     background-color: #19559b;
+     border: none;
+     color: white;
+     padding: 15px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 14px;
+     margin: 18px 2px;
+     cursor: pointer;
+   }
+   h2{
+    margin: 0px;
+    padding: 0px;
+   }
+#education{
+    background-color:white;
+    grid-area: education;
+   
+}
+#content3{
+    background-color: #FF758F;
+    grid-area: content3;
+    border-radius: 5%;
+    padding: 5px;
+}
+#content4{
+    background-color: #FF758F;
+    grid-area: content4;
+    border-radius: 5%;
+    padding: 5px;
+}
+#experiences{
+    background-color:white;
+    grid-area: experiences;
+   
+}
+#content5{
+    padding: 5px;
+    background-color:#A4133C;
+    grid-area: content5;
+    border-radius: 5%;
+}
+#content6{
+    padding: 5px;
+    background-color:#A4133C;
+    grid-area: content6;
+    border-radius: 5%;
+}
+#content7{
+    padding: 5px;
+    background-color: #A4133C;
+    grid-area: content7;
+    border-radius: 5%;
+}
+#projects{
+    background-color:white;
+    grid-area: projects;
+    
+   
+}
+.projectimg img{
+    width:200px;
+    height:100px;
+    padding: 5px;
+ }
+#projectcontent1{
+    background-color:#A4133C;
+    grid-area: projectcontent1;    
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    text-align: center;
+    
+}
+#projectcontent2{
+    background-color:#A4133C;
+    grid-area: projectcontent2;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    text-align: center;
+}
+#projectContent3{
+    background-color: #A4133C;
+    grid-area: projectContent3;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    text-align: center;
+}
+.containerskill {
+    background-color: rgb(192, 192, 192);
+    width: 80%;
+   height:10px;        
+}
+
+.skillelement {
+    background-color: rgb(28, 95, 8);
+    color: white;
+    padding: 1%;
+    text-align: right;
+    font-size: 12px;
+    height:1px;       
+}
+
+#techContent1{
+    background-color: var(--white);
+    grid-area: techContent1;
+}
+#techContent2{
+    background-color: var(--white);
+    grid-area: techContent2;
+}
+#blog{
+    background-color: var(--white);
+    grid-area: blog;
+}
+
+#blogContent1{
+    background-color:#FF758F;
+    grid-area: blogContent1;
+    text-align: center;
+    border-radius: 5%;
+}
+#blogContent2{
+    background-color:#FF758F;
+    grid-area: blogContent2;
+    text-align: center;
+    border-radius: 5%;
+}
+.blogimg img{
+    margin: 5px;
+    width:200px;
+    height:100px;
+  }
+footer{
+    background-color:#A4133C;
+    grid-area: footer;
+    text-align: center;
+}
+
+@media only screen and (max-width:500px){
+.container{
+    grid-template-columns:1fr ;
+    grid-template-rows: /*1*/1fr
+     /*2*/6fr  /*3*/6fr /*4*/1fr /*5*/6fr /*6*/6fr /*7*/1fr /*8*/6fr /*9*/6fr /*10*/6fr  /*11*/1fr /*12*/6fr
+     /*13*/6fr /*14*/6fr /*15*/6fr /*16*/6fr /*17*/1fr /*18*/6fr /*19*/6fr /*20*/1fr;
+    grid-template-areas:
+     "nav" /*1*/
+     "content1"/*2*/
+     "content2"/*3*/
+     "education"/*4*/
+     "content3"/*5*/
+     "content4"/*6*/
+     "experiences"/*7*/
+     "content5"/*8*/
+     "content6"/*9*/
+     "content7"/*10*/
+     "projects" /*11*/
+     "projectcontent1"/*12*/
+     "projectcontent2"/*13*/
+     "projectContent3"/*14*/
+     "techContent1"/*15*/
+     "techContent2"/*16*/
+     "blog"/*17*/
+     "blogContent1" /*18*/   
+     "blogContent2"  /*19*/    
+     "footer" /*20*/
+}
+nav{
+    background-color:#A4133C;
+}
+
+.home{
+    display: block;
+}
+.active{
+    display: none;
+}
+ul{
+    width: 100%;
+    float: right;
+    left:0;
+    text-align: center;    
+}
+nav ul li a {
+    color: white;
+    font-size: 20px;
+  }
+nav ul li{
+    display: block;    
+}
+nav.responsive {position: relative;}
+nav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <nav id="myTopnav">
+            <div id="headername">Sapana Shrestha</div>
+            <div class="dropDownIcon"><i class="fa fa-bars "></i></div>
+            <ul class="dropDownMenu">               
+                <li><a class="home" href="#">Home</a></li>
+                <li><a class="active" href="#"><i class="fa fa-home"></i></a></li>
+                <li><a href="#content1">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#techContent1">Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#footer">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div id="content1">
+            <div class="aboutdiv" id="imgdiv">
+                <img src="./img/profile.jpg" id="profileimg" alt="Paris"><br>
+                <label id="name"> <b>Sapana Shrestha</b></label><br>
+                <label id="title">Software Engineer</label>
+            </div>
+        </div>
+        <div id="content2">
+            <div id="aboutmetext">
+                <h2><b>ABOUT ME</b></h1>
+            </div>
+            <div id="aboutmepara">I'm a software engineer specialised in frontend and backend development for
+                complex scalable web apps,
+                using different programming tools like Java, Pythin, Spring, Hibernate, React, JavaScript, jQuery,
+                HTML/CSS, MySQL, Oracle,
+                and GIT. I am currently pursuing Master in Computer Science degree from the University of New Haven.
+                I am a team player with strong analytical skills. I have knowledge of basic accounting principles
+                and financial data as well,
+                that I learned from the development of banking applications.
+
+            </div>
+            <div><button class="button button1">Download Resume</button></div>
+        </div>
+        <div id="education">
+            <h2>Education</h2>
+        </div>
+        <div id="content3">
+            University of New Haven<br><b> Master of Science, Computer Science</b><br>
+            West Haven, Connecticut<br>
+            May 2023
+
+        </div>
+        <div id="content4">
+
+            Kathmandu Engineering College<br>
+            <b>Bachelor in Computer Engineering</b><br>
+            Kathmandu, Nepal<br>
+            October 2018
+
+        </div>
+        <div id="experiences">
+            <h2>Experiences</h2>
+        </div>
+        <div id="content5">
+            <b>Student Assistant</b><br>
+            University of New Haven-Office of Advancement<br>
+            December 2021 - Present<br><br>
+            Assist on data cleanup efforts, and perform basic biographical, financial, and philanthropic research on
+            donor
+            prospects.
+        </div>
+        <div id="content6">
+            <b>Software Engineer</b><br>
+            Professional Computer System Private Limited <br>
+            August 2019-July 2021<br><br>
+            Created web applications for banking institutions, with a focus on the core banking system.
+            Assisted in software testing, maintenance, and documentation
+            Write and aid in preparing training and operating manual
+        </div>
+        <div id="content7">
+            <b> Junior Android Developer</b><br>
+            DIT Solution Private Limited <br>
+            February 2019-August 2019<br><br>
+            Created an application in JAVA using Android Studio.
+            Worked closely with the client to establish problem specifications and system designs.
+        </div>
+        <div id="projects">
+            <h2>Projects</h2>
+        </div>
+        <div id="projectcontent1">
+            <div class="projectimg"><img src="./img/financial.PNG" alt="Paris"></div>
+            <b>Fincloud</b><br>
+            Web Application for providing core banking solutions to the financial institutions in Nepal.
+        </div>
+        <div id="projectcontent2">
+            <div class="projectimg"><a href="https://github.com/sapstha/NearByCineplex"><img src="./img/cineplex.PNG"
+                        alt="Paris"></a></div>
+            <b>NearBy Cineplex</b><br>
+            Android application to view, book and buy movie’s ticket designed with Java, XML, and SQLite
+            for the database
+
+        </div>
+        <div id="projectContent3">
+            <div class="projectimg"><a href="https://github.com/sapstha/EventInfo"><img src="./img/event.PNG" alt="Paris"></a>
+            </div>
+            <b>Event Info</b><br>Web application to display, post, and update various events, designed using JSP,
+            Java, and MYSQL
+            for the database
+        </div>
+        <div id="techContent1">
+            <h2>Technical Skills</h2>
+            <br> <br>
+            <label>JAVA</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:95%"></div>
+            </div>
+
+            <label>Spring</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:90%"></div>
+            </div>
+            <label>Hibernate</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:85%"></div>
+            </div>
+            <label>HTML/CSS</label>
+            <div class="containerskill">
+                <div class="skillelement"></div>
+            </div>
+            <label>JavaScript</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:85%"></div>
+            </div>
+            <label>jQuery</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:80%"></div>
+            </div>
+            <label>MySQL</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:80%"></div>
+            </div>
+
+        </div>
+        <div id="techContent2">
+            <h2>Soft Skills</h2>
+            <br> <br>
+            <label>Team Player</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:95%"></div>
+            </div>
+
+            <label>Communication</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:90%"></div>
+            </div>
+            <label>Leadership</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:95%"></div>
+            </div>
+
+            <label>Problem Solving</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:90%"></div>
+            </div>
+            <label>Creativity</label>
+            <div class="containerskill">
+                <div class="skillelement" style="width:90%"></div>
+            </div>
+        </div>
+        <div id="blog">
+            <h2>Blog</h2>
+        </div>
+        <div id="blogContent1">
+            <div class="blogimg"><a href="https://www.nytimes.com/wirecutter/"><img src="./img/wirecutter.PNG" alt="Paris"
+                        height:100px></a></div>
+            <b>WireCutter</b><br>
+            Wirecutter samples all things gear and technology and then features the cream
+            of the crop for your consideration.
+
+
+        </div>
+
+        <div id="blogContent2">
+            <div class="blogimg"><a href="https://techcrunch.com/"><img src="./img/techcrunch.PNG" alt="Paris"></a></div>
+            <b>TechCrunch</b><br>
+            Reports on new start-ups, new developments and new products alike
+
+        </div>
+        <footer>
+            <div id="footer">
+
+                <h2>Contact Me</h2>
+                <p> <b>sshre7@unh.newhaven.edu</b><br>
+                    <a href="https://www.linkedin.com/in/sapana-shrestha/"><i class="fa fa-linkedin-square"
+                            style="font-size:24px;color:blue; "></i></a>
+                    <a href="https://www.facebook.com/sapana.shrestha.9083/"><i class="fa fa-facebook-square"
+                            style="font-size:24px;color:blue;"></i></a>
+                </p>
+
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+<script> 
+    
+    var mediaWidth = window.matchMedia("(max-width: 500px)");
+    const icon= document.querySelector('.dropDownIcon');
+    const dropDown= document.querySelector('.dropDownMenu');
+    myFunction(mediaWidth);
+    mediaWidth.addListener(myFunction);
+   function myFunction(mediaWidth) {
+  if (mediaWidth.matches) {
+    icon.style.display='block';
+    dropDown.style.display='none';
+  } else {     
+    icon.style.display='none';
+    dropDown.style.display='block';
+  }
+
+}
+icon.addEventListener('mouseover',()=>{        
+        setTimeout(function() {
+           dropDown.style.display='none';
+        }, 3000);    
+        dropDown.style.display='block';
+    });
+</script>
